@@ -2,14 +2,14 @@ package com.codecademy.unquote;
 
 public class Question
 {
-    private int imageId;
-    private String questionText;
-    private String answer0;
-    private String answer1;
-    private String answer2;
-    private String answer3;
-    private int correctAnswer;
-    private int playerAnswer;
+    int imageId;
+    String questionText;
+    String answer0;
+    String answer1;
+    String answer2;
+    String answer3;
+    int correctAnswer;
+    int playerAnswer;
 
     public Question(int imageIdentifier, String questionString, String answerZero, String answerOne, String answerTwo, String answerThree, int correctAnswerIndex)
     {
@@ -23,7 +23,7 @@ public class Question
         playerAnswer = -1;
     }
 
-    private boolean isCorrect()
+    public boolean isCorrect()
     {
         return playerAnswer == correctAnswer;
     }
