@@ -260,6 +260,12 @@ public class MainActivity extends AppCompatActivity
         questions.add(question11);
         questions.add(question12);
 
+
+        while(questions.size() > 6)
+        {
+            questions.remove(generateRandomNumber(questions.size()));
+        }
+
         totalCorrect = 0;
         totalQuestions = questions.size();
 
@@ -279,7 +285,7 @@ public class MainActivity extends AppCompatActivity
         return questions.get(currentQuestionIndex);
     }
 
-    int generateRandomNumber(int max)
+    int generateRandomNumber(int max) // returns a number between 0 and max
     {
         double randomNumber = Math.random();
         double result = max * randomNumber;
